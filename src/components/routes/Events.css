@@ -1,0 +1,218 @@
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 30px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .event-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .event-card {
+    background-color: #b4a8ec2c;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  
+  .event-card__image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .event-card__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .event-card__description {
+    flex: 1;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Adjust the number of lines to display */
+    -webkit-box-orient: vertical;
+    margin-bottom: 0; /* Remove the bottom margin */
+  }
+  
+  .event-card__button {
+    background-color: #337ab7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: auto; /* Align the button to the bottom */
+  }
+  
+  
+  @media (max-width: 600px) {
+    .event-grid {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    
+    .event-card {
+      padding: 12px;
+      align-items: flex-start; /* Vertically align content to the top */
+    }
+    
+    .event-card__title {
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+    
+    .event-card__info {
+      margin-bottom: 2px;
+    }
+    
+    .event-card__description {
+      margin-bottom: 5px;
+    }
+    
+    .event-card__button {
+      padding: 8px 16px;
+    }
+  }
+  
+  #event-category {
+    margin-right: 8px;
+  }
+  
+  
+  /* BUTTON STYLE */
+  
+  #search-button {
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    width: 95.02px;
+    height: 42.66px;
+    border: none;
+    background-color: #3653F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #search-button .span-mother {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  button:hover .span-mother {
+    position: absolute;
+  }
+  
+  button:hover .span-mother span {
+    transform: translateY(1.2em);
+  }
+  
+  button .span-mother span:nth-child(1) {
+    transition: .2s;
+  }
+  
+  button .span-mother span:nth-child(2) {
+    transition: .3s;
+  }
+  
+  button .span-mother span:nth-child(3) {
+    transition: .4s;
+  }
+  
+  button .span-mother span:nth-child(4) {
+    transition: .5s;
+  }
+  
+  button .span-mother span:nth-child(5) {
+    transition: .6s;
+  }
+  
+  button .span-mother span:nth-child(6) {
+    transition: .7s;
+  }
+  
+  button .span-mother2 {
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+  }
+  
+  button .span-mother2 span {
+    transform: translateY(-1.2em);
+  }
+  
+  button:hover .span-mother2 span {
+    transform: translateY(0);
+  }
+  
+  button .span-mother2 span {
+    transition: .2s;
+  }
+  
+  button .span-mother2 span:nth-child(2) {
+    transition: .3s;
+  }
+  
+  button .span-mother2 span:nth-child(3) {
+    transition: .4s;
+  }
+  
+  button .span-mother2 span:nth-child(4) {
+    transition: .5s;
+  }
+  
+  button .span-mother2 span:nth-child(5) {
+    transition: .6s;
+  }
+  
+  button .span-mother2 span:nth-child(6) {
+    transition: .7s;
+  }
+  
+  
+  /* SEARCH BAR STYLE */
+  
+  .input {
+    max-width: 640px;
+    background-color: #f5f5f5;
+    color: #242424;
+    padding: .15rem .5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+  }
+  
+  input:focus {
+    border-bottom: 2px solid #5b5fc7;
+    border-radius: 4px 4px 2px 2px;
+  }
+  
+  input:hover {
+    outline: 1px solid lightgrey;
+  }
