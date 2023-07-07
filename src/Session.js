@@ -13,3 +13,5 @@ export const getSessionToken = () => {
 export const removeSessionToken = () => {
   Cookies.remove(SESSION_COOKIE_NAME);
 };
+
+
