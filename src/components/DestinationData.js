@@ -15,9 +15,9 @@ class DestinationData extends Component{
               </div>
       
               <div className="image">
-                  <img src={this.props.img1} alt="suswa" />
+                  <img src="https://images.unsplash.com/photo-1623176035122-4e07bc19bab7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80" alt="suswa" />
       
-                  <img src={this.props.img2} alt="suswa" />
+                  <img src="https://images.unsplash.com/photo-1589394913966-620f6216b63e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="suswa" />
               </div>
             </div>
           </div>

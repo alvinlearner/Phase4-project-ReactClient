@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import Hero from '../Hero'
 import './Events.css';
 
 export default function Events() {
@@ -65,17 +64,21 @@ export default function Events() {
       .catch((error) => console.error('Error:', error));
   }, []);
 
+  const handleEventCardClick = (id) => {
+      fetch(`/events/${id}`)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => console.error('Error:', error))
+        ;
+  };
+  
+  
   return (
     <>
     <Navbar />
-    <Hero cName="hero"
-        heroImg="https://c4.wallpaperflare.com/wallpaper/720/490/490/sunset-mountain-range-teal-5k-wallpaper-preview.jpg"
-        title="Events"
-        text=""
-        
-        url="/"
-         />
-    <div style={{marginTop:"10px"}}>
+    <div style={{marginTop:"100px"}}>
 
       
       <form onSubmit={handleFormSubmit} className="search-form">
@@ -106,13 +109,14 @@ export default function Events() {
           </span>
         </button>
       </form>
-      <div className="event-grid" >
+      <div className="event-grid">
         {filteredEvents.map((event) => (
           <div key={event.id} className="event-card">
             <img
               src={event.image}
               alt={event.name}
               className="event-card__image"
+              onClick={() => handleEventCardClick(event.id)}
             />
             <div className="event-card__content">
               <h3 className="event-card__title">{event.name}</h3>

@@ -28,7 +28,7 @@ export const Menuitems = [
     },
 
     {
-        title : "Logout",
+        title : "logout",
         url : "/",
         cName : "nav-links",
         icon : "fa-solid fa-sign-out"

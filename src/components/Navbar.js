@@ -21,11 +21,16 @@ function Navbar() {
         // Handle the response and perform necessary actions
         if (response.ok) {
           // User session deleted successfully, perform any required actions (e.g., redirect to login page)
-          
           navigate('/');
   
-          // Modify browser history to prevent going back to the application after logout
-          window.history.pushState(null, '', '/');
+          // Replace the current history entry with the login page
+          window.history.replaceState(null, '', '/');
+  
+          // Clear the browser history to prevent going back to the application after logout
+          window.history.go(0);
+
+          alert('session deleted')
+
         } else {
           // An error occurred, handle the error (e.g., display an error message)
           alert('Failed to delete user session');

@@ -1,0 +1,84 @@
+.event-form {
+    border: 1px solid rgb(125, 125, 236);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .event-form div label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-form div input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .event-form div button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .event-form div button:hover {
+    background-color: #0056b3;
+  }
+
+  
+  /* .event-list h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .event-list h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .event-list p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  } */
+  
+  .event-grid button {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .event-grid button:hover {
+    background-color: #c82333;
+  }
+
+  /* Gridify dashboard */
+  .event-card__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .event-card__description {
+    flex: 1;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Adjust the number of lines to display */
+    -webkit-box-orient: vertical;
+    margin-bottom: 0; /* Remove the bottom margin */
+  }

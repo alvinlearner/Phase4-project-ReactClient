@@ -13,19 +13,19 @@ function Footer() {
         </div>
 
         <div className='icons'>
-        <a href="/">
+        <a href="https://www.facebook.com/login/">
             <i className='fa-brands fa-facebook-square'></i>
         </a>
 
-        <a href="/">
+        <a href="https://www.instagram.com">
             <i className='fa-brands fa-instagram-square'></i>
         </a>
 
-        <a href="/">
+        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den">
             <i className='fa-brands fa-twitter-square'></i>
         </a>
 
-        <a href="/">
+        <a href="https://www.whatsapp.com">
             <i className='fa-brands fa-whatsapp-square'></i>
         </a>
 

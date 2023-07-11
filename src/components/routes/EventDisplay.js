@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../Navbar'
 import Hero from '../Hero'
 import Footer from '../Footer'
-import AboutUs from '../AboutUs'
+
 
 export default function About() {
   return (
@@ -14,8 +14,21 @@ export default function About() {
         title="About"
         btnClass="hide"
       />
-      <AboutUs />
+      <h4>Event display</h4>
       <Footer />
     </>
   )
 }
+
+
+
+useEffect(() => {
+    fetch('/events/:id')
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);;
+      })
+      .catch((error) => console.error('Error:', error));
+  }, []);
+
+    

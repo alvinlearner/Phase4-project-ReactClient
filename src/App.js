@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import Home from './components/routes/Home';
 import About from './components/routes/About';
@@ -8,6 +8,10 @@ import Contact from './components/routes/Contact';
 import LoginForm from './components/routes/LoginForm';
 import SignupForm from './components/routes/Signup';
 import AdminDash from './components/AdminDash/AdminDash';
+import Organisation from './components/AdminDash/Organisation';
+import DashFooter from './components/AdminDash/DashHome';
+import Statistics from './components/AdminDash/Statistics';
+import Graphs from './components/AdminDash/Graphs';
 
 
 function App() {
@@ -29,6 +33,7 @@ function App() {
 
   return (
     <div className="App">
+
       {isLoggedIn ? (
         <React.Fragment>
           <Routes>
@@ -39,13 +44,21 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/organisation" element={<Organisation/>}/>
+            <Route path="/analytics/statistics" element={<Statistics/>}/>
+            <Route path="/analytics/graphs" element={<Graphs/>} />
+            <Route path='/adminhome' element={<DashFooter/>}/>
           </Routes>
         </React.Fragment>
       ) : (
         <LoginForm onLogin={handleLogin} />
       )}
+
     </div>
   );
 }
 
 export default App;
+
+
+
