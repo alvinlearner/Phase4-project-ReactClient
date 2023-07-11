@@ -21,7 +21,7 @@ function LoginForm({ onLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('/login', {
+    fetch('https://events-app-api-mu7z.onrender.com/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

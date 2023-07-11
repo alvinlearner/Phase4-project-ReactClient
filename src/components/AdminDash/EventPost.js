@@ -16,7 +16,7 @@ function AddEvent() {
       amount: amount,
     };
 
-    fetch(`/events`, {
+    fetch(`https://events-app-api-mu7z.onrender.com/events`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

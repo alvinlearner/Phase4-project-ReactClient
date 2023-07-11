@@ -55,7 +55,7 @@ export default function Events() {
   };
 
   useEffect(() => {
-    fetch('/events')
+    fetch('https://events-app-api-mu7z.onrender.com/events')
       .then((response) => response.json())
       .then((data) => {
         setEvents(data);

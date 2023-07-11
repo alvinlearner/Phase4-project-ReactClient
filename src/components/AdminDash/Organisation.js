@@ -19,7 +19,7 @@ const EventsComponent = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await fetch('/events');
+      const response = await fetch('https://events-app-api-mu7z.onrender.com/events');
       const data = await response.json();
       setEvents(data);
     } catch (error) {
@@ -29,7 +29,7 @@ const EventsComponent = () => {
 
   const createEvent = async (eventParams) => {
     try {
-      const response = await fetch('/events', {
+      const response = await fetch('https://events-app-api-mu7z.onrender.com/events', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(eventParams)
@@ -43,7 +43,7 @@ const EventsComponent = () => {
 
   const deleteEvent = async (eventId) => {
     try {
-      await fetch(`/events/${eventId}`, {
+      await fetch(`https://events-app-api-mu7z.onrender.com/events/${eventId}`, {
         method: 'DELETE',
       });
       setEvents(events.filter((event) => event.id !== eventId));

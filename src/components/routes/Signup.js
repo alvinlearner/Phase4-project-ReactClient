@@ -38,7 +38,7 @@ function SignUpForm() {
       return; // Don't submit the form if passwords don't match
     }
   
-    fetch('/register', {
+    fetch('https://events-app-api-mu7z.onrender.com/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
