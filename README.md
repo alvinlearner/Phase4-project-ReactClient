@@ -9,7 +9,7 @@ Languages used include: REACT library, javaScript, Bootstrap for the frontend an
 Link to the Rails server `https://github.com/alvinlearner/Phase4projectRails`
 
 ## Known Bugs
-
+Access to fetch at 'https://events-app-api-mu7z.onrender.com/login' from origin 'https://main--velvety-sawine-df90ba.netlify.app' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
 ## Support and contact details
 
 ## Authors
