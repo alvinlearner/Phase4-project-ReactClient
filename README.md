@@ -6,6 +6,7 @@ EventHub is a web application that allows users to signup, view and search for e
 
 ## Technologies Used
 Languages used include: REACT library, javaScript, Bootstrap for the frontend and the backend includes ruby on rails.
+Link to the Rails server `https://github.com/alvinlearner/Phase4projectRails`
 
 ## Known Bugs
 
