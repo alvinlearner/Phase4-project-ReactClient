@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../src/assets/images/logo.png';
 
 function Navbar({ user, setUser }) {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const [clicked, setClicked] = useState(false); // Added 'clicked' state
   const navigate = useNavigate();
 
