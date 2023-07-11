@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import DashSideNav from './DashSideNav';
-import 'charts.css';
+
 
 export default function Graphs() {
   const [categoryData, setCategoryData] = useState({});
 
   useEffect(() => {
-    fetch('/category_statistics')
+    fetch('https://events-app-api-mu7z.onrender.com/category_statistics')
       .then((response) => response.json())
       .then((data) => {
         setCategoryData(data);
@@ -28,8 +28,9 @@ export default function Graphs() {
     // </div>
 
     <div>
+      <DashSideNav/>
       <h2>Category Statistics</h2>
-      <table className='charts-css bar show-primary-axis'>
+      <table >
         <thead>
           <tr>
             <th>Category</th>
@@ -39,7 +40,7 @@ export default function Graphs() {
         <tbody>
           {Object.entries(categoryData).map(([category, count]) => (
             <tr key={category}>
-              <tr  style={{start: "0.2", size: "0.4"}}>{category}</tr>
+              <tr >{category}</tr>
               <td>{count}</td>
             </tr>
           ))}
