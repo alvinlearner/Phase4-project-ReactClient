@@ -28,7 +28,7 @@ function Navbar({ user, setUser }) {
   return (
     <nav className="NavbarItems">
 
-        <Link to='/adminhome'>
+        <Link to='/about'>
 
             <img id="logo" src={logo} className="logo" alt="Mecha-Adventures" />
 

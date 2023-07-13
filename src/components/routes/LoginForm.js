@@ -37,7 +37,7 @@ function LoginForm({ onLogin }) {
             title: 'Success',
             text: 'Login Successful!',
             icon: 'success',
-            timer: 2000,
+            timer: 1000,
             buttons: false,
           }).then(() => {
             if (typeof onLogin === 'function') {
