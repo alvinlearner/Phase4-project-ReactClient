@@ -27,8 +27,14 @@ function Navbar({ user, setUser }) {
 
   return (
     <nav className="NavbarItems">
-      <img id="logo" src={logo} className="logo" alt="Mecha-Adventures" />
 
+        <Link to='/adminhome'>
+
+            <img id="logo" src={logo} className="logo" alt="Mecha-Adventures" />
+
+          </Link>
+
+     
       <div className="menu-icons" onClick={handleClick}>
         <i className={clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
       </div>
