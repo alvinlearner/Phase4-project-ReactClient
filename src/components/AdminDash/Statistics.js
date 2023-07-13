@@ -12,7 +12,7 @@ function Statistics() {
   }, []);
 
   const fetchUsers = () => {
-    fetch('/users_statistics')
+    fetch('https://events-app-api-mu7z.onrender.com/users_statistics')
       .then(response => response.json())
       .then(data => {
         setUsersCount(data);
