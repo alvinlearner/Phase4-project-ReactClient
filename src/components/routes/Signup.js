@@ -13,6 +13,8 @@ function SignUpForm() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [fadeState, setFadeState] = useState('');
   const [passwordsMatch, setPasswordsMatch] = useState(true); // State to track if passwords match
+  const [error, setError] = useState('');
+
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -38,6 +40,10 @@ function SignUpForm() {
       return; // Don't submit the form if passwords don't match
     }
   
+    const button = document.querySelector('button');
+    button.innerHTML = 'Signing up...';
+    button.disabled = true;
+  
     fetch('https://events-app-api-mu7z.onrender.com/register', {
       method: 'POST',
       headers: {
@@ -62,13 +68,24 @@ function SignUpForm() {
           });
         } else {
           console.log('Sign up failed');
+          swal({
+            title: 'Error',
+            text: 'Failed to  sign up',
+            icon: 'error',
+            buttons: false,
+          });
         }
       })
       .catch((error) => {
         console.error('Error:', error);
-      });
-  };
+      })
   
+      // After a successful or failed sign up, revert the button to "Sign Up"
+      setTimeout(() => {
+        button.innerHTML = 'Sign Up';
+        button.disabled = false;
+      }, 2000);
+    };
 
   useEffect(() => {
     setFadeState('fade-in');
