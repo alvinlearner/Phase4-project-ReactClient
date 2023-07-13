@@ -9,7 +9,6 @@ Languages used include: REACT library, javaScript, Bootstrap for the frontend an
 Link to the Rails server `https://github.com/alvinlearner/Phase4projectRails`
 
 ## Known Bugs
-
 ## Support and contact details
 
 ## Authors
