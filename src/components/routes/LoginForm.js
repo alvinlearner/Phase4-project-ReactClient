@@ -4,6 +4,7 @@ import logo from '../../assets/images/logo.png';
 import './LoginForm.css';
 import swal from 'sweetalert';
 
+
 function LoginForm({ onLogin }) {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
@@ -14,13 +15,15 @@ function LoginForm({ onLogin }) {
     setUsername(e.target.value);
   };
 
+
+
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     fetch('https://events-app-api-mu7z.onrender.com/login', {
       method: 'POST',
       headers: {
@@ -40,11 +43,12 @@ function LoginForm({ onLogin }) {
             timer: 1000,
             buttons: false,
           }).then(() => {
-            if (typeof onLogin === 'function') {
-              onLogin();
-            }
-            navigate('/home');
-          });
+            
+              if (typeof onLogin === 'function') {
+                onLogin();
+              }
+              navigate('/home');
+            });
         } else {
           swal({
             title: 'Error',
@@ -52,6 +56,12 @@ function LoginForm({ onLogin }) {
             icon: 'error',
             buttons: false,
           });
+          setError('An error occurred. Please try again.'); // Set error message
+  
+          //Revert button to original state
+          const button = document.querySelector('button');
+          button.textContent = 'Log in';
+          button.disabled = false;
         }
       })
       .catch((error) => {
@@ -64,8 +74,12 @@ function LoginForm({ onLogin }) {
         });
         setError('An error occurred. Please try again.'); // Set error message
       });
-  };
-
+  
+      // Change button text to "Logging in"
+      const button = document.querySelector('button');
+      button.textContent = 'Logging in';
+      button.disabled = true;
+    };
   return (
     <div className='cover'>
       <div className={`cover-login fade-in`}>
@@ -96,6 +110,7 @@ function LoginForm({ onLogin }) {
           </Link>{' '}
         </p>
       </div>
+     
     </div>
   );
 }

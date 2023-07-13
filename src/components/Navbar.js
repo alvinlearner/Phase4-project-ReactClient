@@ -13,7 +13,7 @@ function Navbar({ user, setUser }) {
 
 
   function handleLogout() {
-    fetch("/logout", { method: "DELETE" }).then((r) => {
+    fetch("https://events-app-api-mu7z.onrender.com/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
       }
