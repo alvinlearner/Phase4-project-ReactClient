@@ -365,3 +365,19 @@
   #buy-ticket:hover span {
     transform: translateX(7px);
   }
+
+
+  /* Custom styling for SweetAlert prompt */
+.swal2-popup .swal2-input {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.swal2-popup .swal2-input::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.swal2-popup .swal2-input:not([value]):focus::placeholder {
+  opacity: 0.7;
+}
