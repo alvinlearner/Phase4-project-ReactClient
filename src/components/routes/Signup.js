@@ -13,7 +13,7 @@ function SignUpForm() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [fadeState, setFadeState] = useState('');
   const [passwordsMatch, setPasswordsMatch] = useState(true); // State to track if passwords match
-  const [error, setError] = useState('');
+
 
 
   const handleUsernameChange = (e) => {
