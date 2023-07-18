@@ -29,6 +29,8 @@ export default function Events() {
     handleSearch();
   };
 
+  
+
   const handleAttendButtonClick = (eventId) => {
     Swal.fire({
       title: 'Enter your details',
