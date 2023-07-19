@@ -8,6 +8,8 @@ export default function Events() {
   const [events, setEvents] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredEvents, setFilteredEvents] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const eventsPerPage = 4;
 
   const handleSearch = () => {
     let filteredData = events;
@@ -28,8 +30,6 @@ export default function Events() {
     event.preventDefault();
     handleSearch();
   };
-
-  
 
   const handleAttendButtonClick = (eventId) => {
     Swal.fire({
@@ -92,6 +92,20 @@ export default function Events() {
       .catch((error) => console.error('Error:', error));
   };
 
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const indexOfLastEvent = currentPage * eventsPerPage;
+  const indexOfFirstEvent = indexOfLastEvent - eventsPerPage;
+  const currentEvents = filteredEvents.slice(indexOfFirstEvent, indexOfLastEvent);
+
+  const totalPages = Math.ceil(filteredEvents.length / eventsPerPage);
+  const pageNumbers = [];
+  for (let i = 1; i <= totalPages; i++) {
+    pageNumbers.push(i);
+  }
+
   return (
     <>
       <Navbar />
@@ -124,8 +138,21 @@ export default function Events() {
             </span>
           </button>
         </form>
+
+        <div className="pagination">
+          {pageNumbers.map((pageNumber) => (
+            <button
+              key={pageNumber}
+              onClick={() => handlePageChange(pageNumber)}
+              className={currentPage === pageNumber ? 'active' : ''}
+            >
+              {pageNumber}
+            </button>
+          ))}
+        </div>
+
         <div className="event-grid">
-          {filteredEvents.map((event) => (
+          {currentEvents.map((event) => (
             <div key={event.id} className="event-card">
               <img
                 src={event.image}
